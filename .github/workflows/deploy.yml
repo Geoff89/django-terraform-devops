@@ -6,6 +6,9 @@ on:
       - main
       - prod
 
+# concurrency required to avoid terraform lock contention during ECR provisioning
+concurrency: ci-${{ github.repository }}-docker-pipeline
+
 jobs:
   test-lint:
     uses: ./.github/workflows/test-and-lint.yml
