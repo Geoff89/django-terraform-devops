@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - prod
       - prod
 
 # concurrency required to avoid terraform lock contention during ECR provisioning
